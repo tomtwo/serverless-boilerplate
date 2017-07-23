@@ -1,11 +1,11 @@
 // @flow;
 
 import Koa from 'koa';
-// import convert from 'koa-convert';
+import convert from 'koa-convert';
 import bodyParser from 'koa-bodyparser';
 
 const app = new Koa();
-app.use(bodyParser());
+app.use(convert(bodyParser()));
 
 // error handler
 app.use(async (ctx, next) => {

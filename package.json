@@ -43,11 +43,11 @@
   "scripts": {
     "build": "npm run lint && npm run webpack",
     "start": "node .webpack/handler-local",
-    "dev": "babel-watch src/start-http",
-    "inspect": "babel-node --inspect src/start-http",
+    "dev": "babel-watch ./handler-local",
+    "inspect": "babel-node --inspect handler-local",
     "offline": "sls offline --location .webpack",
     "lint": "npm run eslint && npm run flow",
-    "eslint": "./node_modules/.bin/eslint .",
+    "eslint": "eslint .",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "webpack": "webpack --config webpack.config.js",
     "webpack-watch": "webpack --config webpack.config.js --watch"

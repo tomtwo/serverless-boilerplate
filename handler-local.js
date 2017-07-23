@@ -2,4 +2,10 @@
 
 // run koa server locally without serverless/lambda
 
-require('./src/start-http');
+import app from './src/server';
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log('* App started on ', port);
+});

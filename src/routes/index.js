@@ -7,7 +7,7 @@ const router = new Router();
 
 router.get('/', (ctx: KoaContext) => {
   ctx.response.type = 'text/html';
-  ctx.response.body = `<h2>serverless-boilerplate v${require('./../../package.json').version} </h2>`;
+  ctx.response.body = `<h2>serverless-boilerplate</h2>`;
 });
 
 router.get('/info', (ctx: KoaContext) => {

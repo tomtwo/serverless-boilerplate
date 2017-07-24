@@ -1,5 +1,11 @@
 // @flow;
 
+// read config from .env to process.env
+const data = require('dotenv').config();
+if (data.error) {
+  console.warn('* failed to read env from .env');
+}
+
 import Koa from 'koa';
 import convert from 'koa-convert';
 import bodyParser from 'koa-bodyparser';

@@ -26,3 +26,6 @@ dist
 .build/*
 environment
 keys.sh
+
+# ignore env variables
+.env

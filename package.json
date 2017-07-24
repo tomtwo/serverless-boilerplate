@@ -2,12 +2,14 @@
   "name": "serverless-boilerplate",
   "version": "0.0.1",
   "description": "",
-  "main": "src/start.js",
+  "main": "handler-local.js",
   "engines": {
     "node": ">=6.10.0"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "dotenv": "^4.0.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^3.2.0",
     "koa-convert": "^1.2.0",
@@ -38,6 +40,7 @@
     "koa-flow-declarations": "^0.1.0",
     "serverless-offline": "^3.13.1",
     "serverless-webpack": "^1.0.0-rc.4",
+    "touch": "^3.1.0",
     "webpack": "^2.3.2",
     "webpack-node-externals": "^1.5.4"
   },

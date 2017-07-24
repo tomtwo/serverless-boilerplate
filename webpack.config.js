@@ -1,6 +1,10 @@
+const touch = require('touch');
+touch.sync('./.env');
+
 const glob = require('glob');
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   // entry: globEntries('!(webpack.config).js'),
@@ -21,7 +25,11 @@ module.exports = {
     libraryTarget: 'commonjs',
     path: path.join(__dirname, '.webpack'),
     filename: '[name].js'
-  }
+  },
+
+  plugins: [
+    new CopyWebpackPlugin([{ from: '.env', to: '.' }])
+  ]
 };
 
 function globEntries(globPath) {
